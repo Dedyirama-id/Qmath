@@ -1,5 +1,5 @@
 import 'regenerator-runtime'; /* for async await transpile */
-import '../styles/main.css';
+import '../styles/style.css';
 import NumberApp from './utils/number';
 import CharacterApp from './utils/character';
 
