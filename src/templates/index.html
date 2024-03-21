@@ -1,18 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Speed Count</title>
-  </head>
-  <body>
-    <p class="text-3xl font-bold">Hello World!</p>
-    <p>Hello World!</p>
-    <details class="dropdown">
-      <summary class="m-1 btn">open or close</summary>
-      <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-        <li><a>Item 1</a></li>
-        <li><a>Item 2</a></li>
-      </ul>
-    </details>
-  </body>
+<html data-theme="dark" lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Speed Count</title>
+</head>
+
+<body class="flex flex-col h-screen">
+  <header class="navbar bg-base-100 p-4">
+    <div class="navbar-start">
+      <a class="btn btn-ghost text-xl">SpeedCount</a>
+    </div>
+    <div class="navbar-center flex align-middle">
+      <form class="form-control flex flex-row gap-4 *:h-fit items-center">
+        <p>Mode: </p>
+        <label class="flex items-center cursor-pointer aspect-square btn-neutral">
+          <input type="checkbox" class="hidden" />
+          <span class="label-text block select-none h-fit aspect-square">+</span>
+        </label>
+        <label class="flex items-center cursor-pointer aspect-square btn-neutral">
+          <input type="checkbox" class="hidden" />
+          <span class="label-text block select-none h-fit aspect-square">-</span>
+        </label>
+        <label class="flex items-center cursor-pointer aspect-square btn-neutral">
+          <input type="checkbox" class="hidden" />
+          <span class="label-text block select-none h-fit aspect-square">x</span>
+        </label>
+        <label class="flex items-center cursor-pointer aspect-square btn-neutral">
+          <input type="checkbox" class="hidden" />
+          <span class="label-text block select-none h-fit aspect-square">/</span>
+        </label>
+        <label class="flex items-center cursor-pointer aspect-square btn-neutral">
+          <input type="checkbox" class="hidden" />
+          <span class="label-text block select-none h-fit aspect-square">A</span>
+        </label>
+      </form>
+      <div class="divider divider-horizontal"></div>
+      <div class="flex gap-4 items-center justify-center">
+        <p class="h-fit">Level: </p>
+        <div>
+          <input type="range" min="1" max="4" value="1" class="range" step="1" />
+          <div class="w-full flex justify-between text-xs px-2 gap-6">
+            <span>easy</span>
+            <span>normal</span>
+            <span>medium</span>
+            <span>hard</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-end">
+      <a class="btn">Button</a>
+    </div>
+  </header>
+  <div class="hero grow bg-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+      <div class="text-center lg:text-left">
+        <h1 class="text-5xl font-bold">Start Count Speed Test!</h1>
+        <p class="py-6">Select your level, click Start and Start Counting. Your average count speed will be shown.</p>
+        <p class="py-6">Tips: Mathematical equation questions are answered with calculated numbers. If the question is a
+          letter/character, answer with the sequence number of the letter in the alphabet. For example, A = 1, J = 10;
+        </p>
+      </div>
+      <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div class="mockup-code">
+          <pre><code class="inline-block w-full text-center">5 + 2</code></pre>
+        </div>
+        <form class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Answer</span>
+            </label>
+            <input type="number" placeholder="your answer in number" class="input input-bordered" required />
+          </div>
+          <div class="form-control mt-6">
+            <button class="btn btn-primary">Start Count</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

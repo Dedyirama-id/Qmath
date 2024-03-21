@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+input[type="checkbox"] + .label-text {
+  @apply aspect-square btn btn-sm
+}
+
+input[type="checkbox"]:checked + .label-text {
+  @apply btn-success btn-sm
+}
