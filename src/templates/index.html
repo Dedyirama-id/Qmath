@@ -12,45 +12,47 @@
       <a class="btn btn-ghost text-xl">SpeedCount</a>
     </div>
     <div class="navbar-center flex align-middle">
-      <form class="form-control flex flex-row gap-4 *:h-fit items-center">
-        <p>Mode: </p>
-        <label class="flex items-center cursor-pointer aspect-square btn-neutral">
-          <input type="checkbox" class="hidden" />
-          <span class="label-text block select-none h-fit aspect-square">+</span>
-        </label>
-        <label class="flex items-center cursor-pointer aspect-square btn-neutral">
-          <input type="checkbox" class="hidden" />
-          <span class="label-text block select-none h-fit aspect-square">-</span>
-        </label>
-        <label class="flex items-center cursor-pointer aspect-square btn-neutral">
-          <input type="checkbox" class="hidden" />
-          <span class="label-text block select-none h-fit aspect-square">x</span>
-        </label>
-        <label class="flex items-center cursor-pointer aspect-square btn-neutral">
-          <input type="checkbox" class="hidden" />
-          <span class="label-text block select-none h-fit aspect-square">/</span>
-        </label>
-        <label class="flex items-center cursor-pointer aspect-square btn-neutral">
-          <input type="checkbox" class="hidden" />
-          <span class="label-text block select-none h-fit aspect-square">A</span>
-        </label>
-      </form>
-      <div class="divider divider-horizontal"></div>
-      <div class="flex gap-4 items-center justify-center">
-        <p class="h-fit">Level: </p>
-        <div>
-          <input type="range" min="1" max="4" value="1" class="range" step="1" />
-          <div class="w-full flex justify-between text-xs px-2 gap-6">
-            <span>easy</span>
-            <span>normal</span>
-            <span>medium</span>
-            <span>hard</span>
+      <form id="configuration-form" class="form-control flex flex-row gap-4 *:h-fit items-center">
+        <div class="flex gap-4">
+          <p>Mode: </p>
+          <label class="flex items-center cursor-pointer aspect-square btn-neutral">
+            <input id="addition" type="checkbox" class="hidden" />
+            <span class="label-text block select-none h-fit aspect-square">+</span>
+          </label>
+          <label class="flex items-center cursor-pointer aspect-square btn-neutral">
+            <input id="substraction" type="checkbox" class="hidden" />
+            <span class="label-text block select-none h-fit aspect-square">-</span>
+          </label>
+          <label class="flex items-center cursor-pointer aspect-square btn-neutral">
+            <input id="multiplication" type="checkbox" class="hidden" />
+            <span class="label-text block select-none h-fit aspect-square">x</span>
+          </label>
+          <label class="flex items-center cursor-pointer aspect-square btn-neutral">
+            <input id="division" type="checkbox" class="hidden" />
+            <span class="label-text block select-none h-fit aspect-square">/</span>
+          </label>
+          <label class="flex items-center cursor-pointer aspect-square btn-neutral">
+            <input id="character" type="checkbox" class="hidden" />
+            <span class="label-text block select-none h-fit aspect-square">A</span>
+          </label>
+        </div>
+        <div class="divider divider-horizontal"></div>
+        <div class="flex gap-4 items-center justify-center">
+          <p class="h-fit">Level: </p>
+          <div>
+            <input id="level" type="range" min="1" max="4" value="1" class="range" step="1" />
+            <div class="w-full flex justify-between text-xs px-2 gap-6">
+              <span>easy</span>
+              <span>normal</span>
+              <span>medium</span>
+              <span>hard</span>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
     <div class="navbar-end">
-      <a class="btn">Button</a>
+      <a class="btn">Dummy Button</a>
     </div>
   </header>
   <div class="hero grow bg-base-200">
@@ -64,17 +66,17 @@
       </div>
       <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
         <div class="mockup-code">
-          <pre><code class="inline-block w-full text-center">5 + 2</code></pre>
+          <pre><code id="question-block" class="inline-block w-full text-center"></code></pre>
         </div>
         <form class="card-body">
           <div class="form-control">
             <label class="label">
               <span class="label-text">Answer</span>
             </label>
-            <input type="number" placeholder="your answer in number" class="input input-bordered" required />
+            <input id="answer" type="number" placeholder="your answer in number" class="input input-bordered" />
           </div>
           <div class="form-control mt-6">
-            <button class="btn btn-primary">Start Count</button>
+            <button id="start-button" class="btn btn-primary">Start Counting</button>
           </div>
         </form>
       </div>

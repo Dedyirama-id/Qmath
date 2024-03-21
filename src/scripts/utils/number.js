@@ -3,6 +3,8 @@ class NumberApp {
     this._level = level;
     this._minNumber = 10 ** (this._level - 1);
     this._maxNumber = 10 ** this._level;
+
+    this._getRandomNumber = this._getRandomNumber.bind(this);
   }
 
   _getRandomNumber() {
@@ -19,7 +21,7 @@ class NumberApp {
     };
   }
 
-  getSubtraction() {
+  getSubstraction() {
     const a = this._getRandomNumber();
     const b = this._getRandomNumber();
 
