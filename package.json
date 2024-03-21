@@ -8,7 +8,8 @@
     "build": "webpack --config webpack.prod.js",
     "serve": "http-server dist",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "deploy": "firebase deploy --only hosting:qmath"
   },
   "keywords": [],
   "author": "dedy_irama <dedyirama.ars@gmail.com>",
@@ -44,6 +45,7 @@
     "whatwg-fetch": "^3.6.2"
   },
   "dependencies": {
+    "firebase": "^10.9.0",
     "regenerator-runtime": "^0.14.0"
   }
 }

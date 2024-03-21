@@ -1,6 +1,11 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/style.css';
+
+import { initializeApp } from 'firebase/app';
 import CountApp from './app';
+import firebaseConfig from './utils/firebase-confg';
+
+const fbApp = initializeApp(firebaseConfig);
 
 const configurationForm = document.getElementById('configuration-form');
 const questionBlock = document.getElementById('question-block');
