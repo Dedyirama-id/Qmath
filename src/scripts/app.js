@@ -41,11 +41,11 @@ class CountApp {
 
   getDivision() {
     const a = this.getRandomNumber();
-    const b = this.getRandomNumber();
+    const ans = this.getRandomNumber();
 
     return {
-      eq: `${a} : ${b}`,
-      ans: a / b,
+      eq: `${ans * a} : ${a}`,
+      ans,
     };
   }
 
