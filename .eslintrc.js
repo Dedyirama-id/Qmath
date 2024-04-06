@@ -26,5 +26,6 @@ module.exports = {
     'class-methods-use-this': 'off',
     'no-underscore-dangle': 'off',
     'max-len': 'off',
+    'no-param-reassign': 'off',
   },
 };

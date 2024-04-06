@@ -1,4 +1,4 @@
-class CountApp {
+class Qmath {
   constructor(level) {
     this._level = level;
     this._minNumber = 10 ** (this._level - 1);
@@ -21,7 +21,8 @@ class CountApp {
 
   getSubstraction() {
     const a = this.getRandomNumber();
-    const b = this.getRandomNumber();
+    let b = this.getRandomNumber();
+    while (a === b) { b = this.getRandomNumber(); }
 
     return {
       eq: `${a} - ${b}`,
@@ -103,4 +104,4 @@ class CountApp {
   }
 }
 
-export default CountApp;
+export default Qmath;
