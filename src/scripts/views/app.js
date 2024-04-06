@@ -2,9 +2,9 @@ import routes from '../routes/routes';
 import UrlParser from '../routes/url-parser';
 
 // TODO: Add skip to content
-// TODO: Add help button (?)
-// TODO: Add update log button (!)
-// TODO: Optimize app
+// // TODO: Add help button (?)
+// // TODO: Add update log button (!)
+// // TODO: Optimize app
 
 class App {
   constructor({ content }) {
@@ -24,6 +24,7 @@ class App {
       //   document.querySelector('#main-content').focus();
       // });
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.log('🚀 ~ App ~ renderPage ~ error:', error);
     }
   }
