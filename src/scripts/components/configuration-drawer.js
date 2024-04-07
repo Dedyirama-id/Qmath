@@ -34,7 +34,11 @@ class ConfigurationDrawer extends HTMLElement {
     this.configurationButton = this.querySelector('#configuration-button');
 
     this.configurationForm = this.querySelector('#configuration-form');
-    this.configurationForm.addEventListener('change', this.pushConfig.bind(this));
+    this.configurationForm.addEventListener('change', () => {
+      this.pushConfig();
+      this._error = null;
+      this._refreshErrorElement();
+    });
     this.addEventListener('click', this.querySelector('#configuration-drawer').click.bind(this));
 
     this.pullConfig();

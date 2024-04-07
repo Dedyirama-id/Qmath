@@ -25,7 +25,7 @@ class QmathPanel extends HTMLElement {
             <label class="label">
               <span class="label-text">Answer</span>
             </label>
-            <input id="answer" type="number" placeholder="your answer in number" class="input input-bordered" />
+            <input id="answer" type="number" placeholder="Your answer in number..." class="input input-bordered"/>
           </div>
           <div class="form-control mt-6">
             <button id="start-button" class="btn btn-primary">Start Counting</button>
@@ -53,7 +53,6 @@ class QmathPanel extends HTMLElement {
         this.answerInput.value = '';
         this.answerInput.disabled = true;
       } else {
-        this.answerInput.disabled = false;
         this.renderNewQuestion();
       }
     });
@@ -87,6 +86,7 @@ class QmathPanel extends HTMLElement {
       this._currentQuestion = app.getQuestion(appConfig.options);
 
       configurationDrawer.disabled();
+      this.answerInput.disabled = false;
 
       this.questionBlock.innerHTML = '';
       this.questionBlock.innerHTML = this._currentQuestion.eq;
