@@ -45,9 +45,12 @@ class UpdateLogs extends HTMLElement {
 
   _updateItemInitiator(updateLog) {
     return `
-      <div id="update-logs-container" class="divider divider-start"><p class="text-lg font-semibold">${updateLog.date}</p></div>
+      <div id="update-logs-container" class="divider divider-start"><p class="text-lg font-semibold">Version: ${updateLog.version}</p></div>
       <div class="flex flex-col gap-2">
-        <h4 class="font-semibold">${updateLog.title}</h4>
+        <div>
+          <h4 class="font-semibold">${updateLog.title}</h4>
+          <p class="text-xs">${updateLog.date}</p>
+        </div>
         <ul class="list-disc pl-4">
           ${(updateLog.descriptions) ? updateLog.descriptions.map((item) => `<li>${item}</li>`).join('') : ''}
         </ul>

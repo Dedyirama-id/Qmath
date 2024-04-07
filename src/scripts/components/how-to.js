@@ -16,7 +16,7 @@ class HowTo extends HTMLElement {
             <li>Click <b>configuration button</b> (<i>gear icon</i>) on the top-right.</li>
             <li>Select your counting option.</li>
             <li>Select your level.</li>
-            <li>Click <b>Start Counting</b> and Start Counting.</li>
+            <li>Click <b>Start Counting</b> button.</li>
             <li>Answer the question with typing the correct answer. If your answer is correct the question will change to the next question automatically.</li>
             <li>Click <b>Finish Counting</b> or Enter to stop counting.</li>
           </ul>
