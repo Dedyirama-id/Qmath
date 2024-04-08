@@ -12,7 +12,7 @@ class QmathStatistic extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <div class="stats shadow">
+      <div class="stats stats-vertical sm:stats-horizontal shadow">
 
         <div class="stat">
           <div class="stat-figure text-secondary">
