@@ -9,6 +9,7 @@ import './components/qmath-statistic';
 import { initializeApp } from 'firebase/app';
 import firebaseConfig from './utils/firebase-confg';
 import App from './views/app';
+import swRegister from './utils/sw-register';
 
 // eslint-disable-next-line no-unused-vars
 const fbApp = initializeApp(firebaseConfig);
@@ -20,4 +21,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
