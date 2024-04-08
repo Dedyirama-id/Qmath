@@ -45,7 +45,7 @@ class UpdateLogs extends HTMLElement {
 
   _updateItemInitiator(updateLog) {
     return `
-      <div id="update-logs-container" class="divider divider-start"><p class="text-lg font-semibold">Version: ${updateLog.version}</p></div>
+      <div id="update-logs-container" class="divider divider-start mb-2 mt-8"><p class="text-lg font-semibold">Version: ${updateLog.version}</p></div>
       <div class="flex flex-col gap-2">
         <div>
           <h4 class="font-semibold">${updateLog.title}</h4>
