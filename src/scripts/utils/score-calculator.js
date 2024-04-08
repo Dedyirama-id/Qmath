@@ -1,4 +1,6 @@
 const calculateScore = (answered, averageTime) => {
+  if (answered === 0) return 0;
+
   const baseScore = 500;
   const baseTime = 5 * 1000;
   const baseAnswer = Math.ceil((averageTime * answered) / baseTime);
