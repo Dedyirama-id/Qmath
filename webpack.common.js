@@ -41,6 +41,13 @@ module.exports = {
     new WorkboxWebpackPlugin.GenerateSW({
       swDest: './sw.bundle.js',
       runtimeCaching: [
+        {
+          urlPattern: ({ url }) => url.href.startsWith('/'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'assets',
+          },
+        },
       ],
     }),
   ],

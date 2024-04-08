@@ -1,11 +1,20 @@
 {
   "updates": [
     {
+      "version": "1.2.2",
+      "date": "2024-04-08",
+      "title": "True App: Instalation & Offline Capability",
+      "description": [
+        "You can now install the Qmath application on your device through the browser. Click on the three dots at the top right of the browser and then click on install Qmath.",
+        "Once you access the Qmath application, you can access it again offline as long as the cache is available."
+      ]
+    },
+    {
       "version": "1.1.0",
       "date": "2024-04-08",
       "title": "New Feature: Stopwatch & Score",
       "description": [
-        "Qmath now can calculate your score with average time and total answered questions."
+        "Qmath can now calculate your score based on the number of correct answers and the average response time."
       ]
     },
     {
