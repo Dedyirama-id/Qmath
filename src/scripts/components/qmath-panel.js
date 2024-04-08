@@ -1,4 +1,5 @@
 import Qmath from '../utils/qmath-app';
+import Stopwatch from '../utils/stopwatch';
 
 // // TODO: Fix Bug cannot answer when correct answer is 0
 // // TODO: Show Error when starting at no config
@@ -16,9 +17,17 @@ class QmathPanel extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-        <div class="mockup-code">
-          <pre><code id="question-block" class="inline-block w-full text-center"></code></pre>
+      <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 overflow-hidden">
+        <div class="w-full bg-neutral rounded-2xl px-4 py-3 flex flex-col gap-2">
+          <div class="text-neutral-content opacity-50">
+            <i class="fa-solid fa-stopwatch"></i>
+            <div id="stopwatch" class="countdown font-mono text-sm rounded-sm p-1">
+              <span id="mm" style="--value:0;"></span>:
+              <span id="ss" style="--value:0;"></span>
+            </div>
+            <div class="divider m-0"></div>
+          </div>
+          <pre><code id="question-block" class="inline-block w-full text-center align-middle"></code></pre>
         </div>
         <form class="card-body">
           <div class="form-control">
@@ -36,6 +45,12 @@ class QmathPanel extends HTMLElement {
     this.startButton = document.getElementById('start-button');
     this.answerInput = document.getElementById('answer');
     this.questionBlock = document.getElementById('question-block');
+    this.stopWatchElement = document.getElementById('stopwatch');
+
+    this._stopwatch = new Stopwatch({
+      mm: this.stopWatchElement.children[0],
+      ss: this.stopWatchElement.children[1],
+    });
 
     this.answerInput.disabled = true;
     this._changeStartButtonStatus();
@@ -52,6 +67,8 @@ class QmathPanel extends HTMLElement {
 
         this.answerInput.value = '';
         this.answerInput.disabled = true;
+
+        this._stopwatch.stop();
       } else {
         this.renderNewQuestion();
       }
@@ -92,6 +109,9 @@ class QmathPanel extends HTMLElement {
       this.questionBlock.innerHTML = this._currentQuestion.eq;
       this._changeStartButtonStatus();
       this.answerInput.focus();
+
+      this._stopwatch.reset();
+      this._stopwatch.start();
     } else {
       configurationDrawer.error = appConfig.error;
       this._isCounting = false;
