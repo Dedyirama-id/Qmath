@@ -4,6 +4,7 @@ import './components/configuration-drawer';
 import './components/qmath-panel';
 import './components/how-to';
 import './components/update-logs';
+import './components/qmath-statistic';
 
 import { initializeApp } from 'firebase/app';
 import firebaseConfig from './utils/firebase-confg';

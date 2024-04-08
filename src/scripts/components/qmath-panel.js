@@ -1,4 +1,5 @@
 import Qmath from '../utils/qmath-app';
+import ScrollTo from '../utils/scroll-to';
 import Stopwatch from '../utils/stopwatch';
 
 // // TODO: Fix Bug cannot answer when correct answer is 0
@@ -9,6 +10,11 @@ class QmathPanel extends HTMLElement {
   constructor() {
     super();
     this._isCounting = false;
+    this._stats = {
+      totalTime: 0,
+      averageTime: 0,
+      answered: 0,
+    };
   }
 
   connectedCallback() {
@@ -46,6 +52,7 @@ class QmathPanel extends HTMLElement {
     this.answerInput = document.getElementById('answer');
     this.questionBlock = document.getElementById('question-block');
     this.stopWatchElement = document.getElementById('stopwatch');
+    this._statsElement = document.querySelector('qmath-statistic');
 
     this._stopwatch = new Stopwatch({
       mm: this.stopWatchElement.children[0],
@@ -69,7 +76,14 @@ class QmathPanel extends HTMLElement {
         this.answerInput.disabled = true;
 
         this._stopwatch.stop();
+        this._statsElement.statsData = this._stats;
       } else {
+        this._stats = {
+          totalTime: 0,
+          averageTime: 0,
+          answered: 0,
+        };
+        ScrollTo.top();
         this.renderNewQuestion();
       }
     });
@@ -77,6 +91,9 @@ class QmathPanel extends HTMLElement {
     this.answerInput.addEventListener('input', () => {
       if (this._currentQuestion.eq && this._currentQuestion.ans) {
         if (parseInt(this.answerInput.value, 10) === this._currentQuestion.ans) {
+          this._stats.answered += 1;
+          this._stats.totalTime += this._stopwatch.timeCount;
+          this._stats.averageTime = this._stats.totalTime / this._stats.answered;
           this.answerInput.value = '';
           this.renderNewQuestion();
         }
