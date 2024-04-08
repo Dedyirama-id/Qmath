@@ -1,6 +1,14 @@
 {
   "updates": [
     {
+      "version": "1.1.0",
+      "date": "2024-04-08",
+      "title": "New Feature: Stopwatch & Score",
+      "description": [
+        "Qmath now can calculate your score with average time and total answered questions."
+      ]
+    },
+    {
       "version": "1.0.0",
       "date": "2024-04-06",
       "title": "Introduction: Initial release."
