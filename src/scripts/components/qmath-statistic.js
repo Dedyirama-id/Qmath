@@ -16,7 +16,7 @@ class QmathStatistic extends HTMLElement {
 
         <div class="stat">
           <div class="stat-figure text-secondary">
-            <i class="fa-regular fa-circle-check text-2xl"></i>
+            <i class="fa-solid fa-circle-check text-2xl"></i>
           </div>
           <div class="stat-title">Answered</div>
           <div id="answered" class="stat-value">-</div>
