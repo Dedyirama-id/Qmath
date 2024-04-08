@@ -1,7 +1,7 @@
 {
   "id": "qmath",
   "start_url": "./index.html",
-  "name": "Qmath",
+  "name": "Qmath: An application for practicing quick math.",
   "short_name": "Qmath",
   "description": "An application for practicing quick math.",
   "display": "standalone",
