@@ -83,6 +83,7 @@ class QmathPanel extends HTMLElement {
 
         this._stopwatch.stop();
         this._statsElement.statsData = this._stats;
+        this.querySelector('#counter').innerText = 0;
       } else {
         this._stats = {
           totalTime: 0,
@@ -98,6 +99,7 @@ class QmathPanel extends HTMLElement {
       if (this._currentQuestion.eq && this._currentQuestion.ans) {
         if (parseInt(this.answerInput.value, 10) === this._currentQuestion.ans) {
           this._stats.answered += 1;
+          this.querySelector('#counter').innerText = this._stats.answered;
           this._stats.totalTime += this._stopwatch.timeCount;
           this._stats.averageTime = this._stats.totalTime / this._stats.answered;
           this.answerInput.value = '';
