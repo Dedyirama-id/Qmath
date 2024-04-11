@@ -26,14 +26,20 @@ class QmathPanel extends HTMLElement {
       <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 overflow-hidden">
         <div class="w-full bg-neutral rounded-2xl px-4 py-3 flex flex-col gap-2">
           <div class="text-neutral-content opacity-50">
-            <i class="fa-solid fa-stopwatch"></i>
-            <div id="stopwatch" class="countdown font-mono text-sm rounded-sm p-1">
-              <span id="mm" style="--value:0;"></span>:
-              <span id="ss" style="--value:0;"></span>
+            <div class="flex justify-between">
+              <div id="stopwatch" class="flex font-mono text-sm rounded-sm p-1 items-center gap-2 *:h-fit">
+                <i class="fa-solid fa-stopwatch"></i>
+                <span id="mm">00</span>:
+                <span id="ss">00</span>
+              </div>
+              <div class="flex font-mono text-sm p-1 items-center gap-2">
+                <i class="fa-solid fa-hashtag align-middle"></i>
+                <span id="counter">0</span>
+              </div>
             </div>
             <div class="divider m-0"></div>
           </div>
-          <pre><code id="question-block" class="inline-block w-full text-center align-middle"></code></pre>
+          <pre><code id="question-block" class="inline-block w-full text-center content-middle align-middle"></code></pre>
         </div>
         <form class="card-body">
           <div class="form-control">

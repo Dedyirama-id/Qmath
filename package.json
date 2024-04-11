@@ -1,6 +1,6 @@
 {
   "name": "qmath",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Web app to practice quick math",
   "main": "index.js",
   "scripts": {
