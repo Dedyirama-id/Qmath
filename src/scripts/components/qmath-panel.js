@@ -61,8 +61,8 @@ class QmathPanel extends HTMLElement {
     this._statsElement = document.querySelector('qmath-statistic');
 
     this._stopwatch = new Stopwatch({
-      mm: this.stopWatchElement.children[0],
-      ss: this.stopWatchElement.children[1],
+      mm: this.stopWatchElement.querySelector('#mm'),
+      ss: this.stopWatchElement.querySelector('#ss'),
     });
 
     this.answerInput.disabled = true;

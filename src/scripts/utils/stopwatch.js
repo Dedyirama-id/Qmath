@@ -37,8 +37,8 @@ class Stopwatch {
   }
 
   _setView(minutesValue = 0, secondsValue = 0) {
-    this._watchElement.minutes.setAttribute('style', `--value:${minutesValue}`);
-    this._watchElement.seconds.setAttribute('style', `--value:${secondsValue}`);
+    this._watchElement.minutes.innerText = (minutesValue < 10) ? `0${minutesValue}` : minutesValue;
+    this._watchElement.seconds.innerText = (secondsValue < 10) ? `0${secondsValue}` : secondsValue;
   }
 }
 
