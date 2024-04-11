@@ -24,7 +24,7 @@ class QmathPanel extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 overflow-hidden">
-        <div class="w-full bg-neutral rounded-2xl px-4 py-3 flex flex-col gap-2">
+        <div class="w-full bg-neutral rounded-b-2xl px-4 py-3 flex flex-col gap-2">
           <div class="text-neutral-content opacity-50">
             <div class="flex justify-between">
               <div id="stopwatch" class="flex font-mono text-sm rounded-sm p-1 items-center gap-2 *:h-fit">

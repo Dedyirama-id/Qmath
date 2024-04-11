@@ -22,7 +22,7 @@ class ConfigurationDrawer extends HTMLElement {
       <div class="drawer drawer-end">
         <input id="configuration-drawer" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content">
-          <label id="configuration-button" for="configuration-drawer" class="drawer-button btn btn-ghost btn-md text-lg"><i class="fa-solid fa-gear"></i></label>
+          <label id="configuration-button" for="configuration-drawer" class="drawer-button btn btn-ghost btn-md text-lg aspect-square"><i class="fa-solid fa-gear"></i></label>
         </div>
         <div class="drawer-side z-10">
           <label for="configuration-drawer" aria-label="close sidebar" class="drawer-overlay"></label>

@@ -5,7 +5,7 @@ class HowTo extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <button class="btn btn-md btn-ghost text-lg" onclick="how_to_modal.showModal()"><i class="fa-regular fa-circle-question"></i></button>
+      <button class="btn btn-md btn-ghost text-lg aspect-square" onclick="how_to_modal.showModal()"><i class="fa-regular fa-circle-question"></i></button>
       <dialog id="how_to_modal" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box flex flex-col gap-2">
           <div>

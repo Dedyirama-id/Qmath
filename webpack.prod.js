@@ -68,13 +68,6 @@ module.exports = merge(common, {
       swDest: './sw.bundle.js',
       runtimeCaching: [
         {
-          urlPattern: ({ url }) => url.href.startsWith('/'),
-          handler: 'StaleWhileRevalidate',
-          options: {
-            cacheName: 'assets',
-          },
-        },
-        {
           urlPattern: ({ url }) => url.href.startsWith('https://kit.fontawesome.com/'),
           handler: 'CacheFirst',
           options: {

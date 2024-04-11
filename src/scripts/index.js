@@ -5,6 +5,7 @@ import './components/qmath-panel';
 import './components/how-to';
 import './components/update-logs';
 import './components/qmath-statistic';
+import './components/theme-controller';
 
 import { initializeApp } from 'firebase/app';
 import firebaseConfig from './utils/firebase-confg';
@@ -14,6 +15,8 @@ import swRegister from './utils/sw-register';
 // eslint-disable-next-line no-unused-vars
 const fbApp = initializeApp(firebaseConfig);
 const app = new App({ content: document.querySelector('#main-content') });
+
+document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'default');
 
 window.addEventListener('hashchange', () => {
   app.renderPage();

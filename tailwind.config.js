@@ -7,6 +7,6 @@ module.exports = {
   },
   plugins: [daisyUi],
   daisyui: {
-    themes: ['light', 'dark', 'cupcake'],
+    themes: ['light', 'dark', 'cupcake', 'lofi', 'valentine', 'corporate', 'pastel', 'wireframe', 'retro'],
   },
 };

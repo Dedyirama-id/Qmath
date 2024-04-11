@@ -6,7 +6,7 @@ class UpdateLogs extends HTMLElement {
 
   async render() {
     this.innerHTML = `
-      <button class="btn btn-md btn-ghost text-lg" onclick="update_logs_modal.showModal()"><i class="fa-solid fa-circle-info"></i></button>
+      <button class="btn btn-md btn-ghost text-lg aspect-square" onclick="update_logs_modal.showModal()"><i class="fa-solid fa-circle-info"></i></button>
       <dialog id="update_logs_modal" class="modal modal-bottom sm:modal-middle">
         <div class="modal-box flex flex-col gap-4">
           <h3 class="font-bold text-xl">🌟 What's New?</h3>
