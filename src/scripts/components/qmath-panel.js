@@ -39,7 +39,7 @@ class QmathPanel extends HTMLElement {
             </div>
             <div class="divider m-0"></div>
           </div>
-          <pre><code id="question-block" class="inline-block w-full text-center content-middle align-middle"></code></pre>
+          <pre><code id="question-block" class="inline-block w-full text-center content-middle align-middle text-neutral-content"></code></pre>
         </div>
         <form class="card-body">
           <div class="form-control">
