@@ -84,13 +84,13 @@ class QmathPanel extends HTMLElement {
         this._stopwatch.stop();
         this._statsElement.statsData = this._stats;
         this.querySelector('#counter').innerText = 0;
+        ScrollTo.top();
       } else {
         this._stats = {
           totalTime: 0,
           averageTime: 0,
           answered: 0,
         };
-        ScrollTo.top();
         this.renderNewQuestion();
       }
     });
