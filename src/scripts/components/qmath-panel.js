@@ -125,7 +125,9 @@ class QmathPanel extends HTMLElement {
 
     if (!appConfig.error) {
       const app = new Qmath(appConfig.level);
-      this._currentQuestion = app.getQuestion(appConfig.options);
+      let grabbedQuestion = app.getQuestion(appConfig.options);
+      while (this._currentQuestion && this._currentQuestion.ans === grabbedQuestion.ans) grabbedQuestion = app.getQuestion(appConfig.options);
+      this._currentQuestion = grabbedQuestion;
 
       configurationDrawer.disabled();
       this.answerInput.disabled = false;
