@@ -8,9 +8,9 @@ class QmathStatistic extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <div class="stats stats-vertical sm:stats-horizontal shadow">
+      <div class="stats stats-vertical w-full sm:stats-horizontal shadow">
 
-        <div class="stat">
+        <div class="stat *:w-fit place-items-center sm:place-items-start">
           <div class="stat-figure text-secondary">
             <i class="fa-solid fa-circle-check text-2xl"></i>
           </div>
@@ -19,7 +19,7 @@ class QmathStatistic extends HTMLElement {
           <div class="stat-desc">Questions</div>
         </div>
 
-        <div class="stat">
+        <div class="stat *:w-fit place-items-center sm:place-items-start">
           <div class="stat-figure text-secondary">
             <i class="fa-solid fa-stopwatch text-2xl"></i>
           </div>
@@ -28,7 +28,7 @@ class QmathStatistic extends HTMLElement {
           <div class="stat-desc">seconds (avg. 5s)</div>
         </div>
 
-        <div class="stat">
+        <div class="stat *:w-fit place-items-center sm:place-items-start">
           <div class="stat-figure text-secondary">
             <i class="fa-solid fa-award text-2xl"></i>
           </div>
