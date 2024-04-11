@@ -82,7 +82,7 @@ class QmathPanel extends HTMLElement {
         this.answerInput.disabled = true;
 
         this._stopwatch.stop();
-        this._statsElement.statsData = this._stats;
+        if (this._stats.answered !== 0) this._statsElement.statsData = this._stats;
         this.querySelector('#counter').innerText = 0;
         ScrollTo.top();
       } else {
