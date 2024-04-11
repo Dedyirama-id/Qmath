@@ -10,8 +10,10 @@ class Qmath {
   }
 
   getAddition() {
-    const a = this.getRandomNumber();
-    const b = this.getRandomNumber();
+    const rangeNumberList = [{ min: 2, max: 10 }, { min: 11, max: 100 }, { min: 101, max: 1000 }, { min: 10001, max: 10000 }];
+    const selectedRangeNumber = rangeNumberList[this._level - 1];
+    const a = this.getRandomNumber(selectedRangeNumber.min, selectedRangeNumber.max);
+    const b = this.getRandomNumber(selectedRangeNumber.min, selectedRangeNumber.max);
 
     return {
       eq: `${a} + ${b}`,
@@ -20,9 +22,12 @@ class Qmath {
   }
 
   getSubstraction() {
-    const a = this.getRandomNumber();
-    let b = this.getRandomNumber();
-    while (a === b) { b = this.getRandomNumber(); }
+    const rangeNumberList = [{ min: 2, max: 10 }, { min: 11, max: 100 }, { min: 101, max: 1000 }, { min: 10001, max: 10000 }];
+    const selectedRangeNumber = rangeNumberList[this._level - 1];
+
+    const a = this.getRandomNumber(selectedRangeNumber.min, selectedRangeNumber.max);
+    let b = this.getRandomNumber(selectedRangeNumber.min, selectedRangeNumber.max);
+    while (a === b) { b = this.getRandomNumber(selectedRangeNumber.min, selectedRangeNumber.max); }
 
     return {
       eq: `${a} - ${b}`,
@@ -31,8 +36,11 @@ class Qmath {
   }
 
   getMultiplication() {
-    const a = this.getRandomNumber();
-    const b = this.getRandomNumber();
+    const rangeNumberList = [{ min: 2, max: 10 }, { min: 11, max: 20 }, { min: 21, max: 100 }, { min: 101, max: 1000 }];
+    const selectedRangeNumber = rangeNumberList[this._level - 1];
+
+    const a = this.getRandomNumber(selectedRangeNumber.min, selectedRangeNumber.max);
+    const b = this.getRandomNumber(selectedRangeNumber.min, selectedRangeNumber.max);
 
     return {
       eq: `${a} x ${b}`,
@@ -41,8 +49,11 @@ class Qmath {
   }
 
   getDivision() {
-    const a = this.getRandomNumber();
-    const ans = this.getRandomNumber();
+    const rangeNumberList = [{ min: 2, max: 10 }, { min: 11, max: 20 }, { min: 21, max: 100 }, { min: 101, max: 1000 }];
+    const selectedRangeNumber = rangeNumberList[this._level - 1];
+
+    const a = this.getRandomNumber(selectedRangeNumber.min, selectedRangeNumber.max);
+    const ans = this.getRandomNumber(selectedRangeNumber.min, selectedRangeNumber.max);
 
     return {
       eq: `${ans * a} : ${a}`,
