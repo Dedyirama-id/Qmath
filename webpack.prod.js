@@ -1,6 +1,7 @@
 const { merge } = require('webpack-merge');
 const TerserPlugin = require('terser-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
@@ -62,4 +63,18 @@ module.exports = merge(common, {
       }),
     ],
   },
+  plugins: [
+    new WorkboxWebpackPlugin.GenerateSW({
+      swDest: './sw.bundle.js',
+      runtimeCaching: [
+        {
+          urlPattern: ({ url }) => url.href.startsWith('/'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'assets',
+          },
+        },
+      ],
+    }),
+  ],
 });
