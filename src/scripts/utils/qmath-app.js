@@ -1,12 +1,10 @@
 class Qmath {
   constructor(level) {
     this._level = level;
-    this._minNumber = 10 ** (this._level - 1);
-    this._maxNumber = 10 ** this._level;
   }
 
-  getRandomNumber(min = this._minNumber, max = this._maxNumber) {
-    return Math.floor(Math.random() * max) + min;
+  getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
   }
 
   getAddition() {
