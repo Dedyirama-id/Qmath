@@ -74,6 +74,13 @@ module.exports = merge(common, {
             cacheName: 'assets',
           },
         },
+        {
+          urlPattern: ({ url }) => url.href.startsWith('https://kit.fontawesome.com/'),
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'fontawesome',
+          },
+        },
       ],
     }),
   ],
