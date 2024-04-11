@@ -6,7 +6,7 @@ class ThemeController extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="dropdown dropdown-end relative aspect-square">
-        <div tabindex="0" role="button" class="btn m-1">
+        <div tabindex="0" role="button" class="btn btn-ghost">
           <i class="fa-solid fa-fill-drip"></i>
         </div>
         <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
