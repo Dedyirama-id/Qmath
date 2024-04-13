@@ -8,7 +8,7 @@ class Qmath {
   }
 
   getAddition() {
-    const rangeNumberList = [{ min: 2, max: 10 }, { min: 11, max: 100 }, { min: 101, max: 1000 }, { min: 10001, max: 10000 }];
+    const rangeNumberList = [{ min: 2, max: 10 }, { min: 11, max: 100 }, { min: 101, max: 1000 }, { min: 10001, max: 100000 }];
     const selectedRangeNumber = rangeNumberList[this._level - 1];
     const a = this.getRandomNumber(selectedRangeNumber.min, selectedRangeNumber.max);
     const b = this.getRandomNumber(selectedRangeNumber.min, selectedRangeNumber.max);
@@ -20,7 +20,7 @@ class Qmath {
   }
 
   getSubstraction() {
-    const rangeNumberList = [{ min: 2, max: 10 }, { min: 11, max: 100 }, { min: 101, max: 1000 }, { min: 10001, max: 10000 }];
+    const rangeNumberList = [{ min: 2, max: 10 }, { min: 11, max: 100 }, { min: 101, max: 1000 }, { min: 10001, max: 100000 }];
     const selectedRangeNumber = rangeNumberList[this._level - 1];
 
     const a = this.getRandomNumber(selectedRangeNumber.min, selectedRangeNumber.max);
